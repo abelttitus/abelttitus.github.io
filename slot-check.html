@@ -1,0 +1,22 @@
+<!DOCType HTML>
+<html>
+<head>
+<title>Slot Check</title>
+</head>
+<body>
+<script type="text/javascript">
+  var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin";
+  var params = "pincode=689641&date=10-05-2021";
+  var http = new XMLHttpRequest();
+
+  http.open("GET", url+"?"+params, true);
+  http.onreadystatechange = function()
+  {
+      if(http.readyState == 4 && http.status == 200) {
+          alert(http.responseText);
+      }
+  }
+  http.send(null);
+</script>
+</body>
+</html>
